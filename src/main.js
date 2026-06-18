@@ -649,11 +649,11 @@ addMesh(0.84, 0.56, 0.03, 4.0, 1.9, -3.09, M.skyblue, false, false);
 ceilingLight(-3.5, -1.5, 0xfff8ff, 0.9, 5);
 
 // Toilet — esquina trasera izquierda (contra muro z=-3)
-addMesh(0.38, 0.55, 0.22, -4.7, 0.62, -2.78, M.white, true, false); // tank
-addMesh(0.45, 0.35, 0.52, -4.7, 0.22, -2.4,  M.white, true, false); // bowl
-addMesh(0.43, 0.05, 0.5,  -4.7, 0.41, -2.4,
+addMesh(0.38, 0.55, 0.22, -4.2, 0.62, -2.78, M.white, true, false); // tank
+addMesh(0.45, 0.35, 0.52, -4.2, 0.22, -2.4,  M.white, true, false); // bowl
+addMesh(0.43, 0.05, 0.5,  -4.2, 0.41, -2.4,
   new THREE.MeshLambertMaterial({ color: 0xe8e8e8 }), false, false); // seat
-colliders.push({ minX: -4.73, maxX: -4.27, minZ: -2.91, maxZ: -2.18 });
+colliders.push({ minX: -4.23, maxX: -3.77, minZ: -2.91, maxZ: -2.18 });
 
 // Sink/lavabo — pared izquierda (x=-5), mitad frontal
 addMesh(0.5,  0.82, 0.52, -4.75, 0.41, -0.7, M.white, true, true); // cabinet
@@ -666,15 +666,15 @@ addMesh(0.03, 0.85, 0.68, -4.85, 1.85, -0.7,
   new THREE.MeshLambertMaterial({ color: 0xbbddee, transparent: true, opacity: 0.65 }), false, false);
 
 // Shower — esquina trasera derecha (x[-3.5,-2], z[-2.9,-1.45])
-addMesh(1.5, 0.08, 1.1, -3.35, 0.04, -2.3,
+addMesh(1.5, 0.08, 1.1, -2.75, 0.04, -2.3,
   new THREE.MeshLambertMaterial({ color: 0xe0e8e8 }), false, false); // tray
-//addMesh(1.4, 2.5, 0.05, -3.35, 1.15, -1.78, M.glass, false, false); // front glass
-addMesh(0.05, 2.5, 1.1, -4.075, 1.15, -2.3, M.glass, false, false); // side glass
-addMesh(0.04, 0.04, 0.28, -3.35, 2.3, -2.86, M.steel, false, false); // arm
+//addMesh(1.4, 2.5, 0.05, -2.75, 1.15, -1.78, M.glass, false, false); // front glass
+addMesh(0.05, 2.5, 1.1, -3.5, 1.15, -2.3, M.glass, false, false); // side glass
+addMesh(0.04, 0.04, 0.28, -2.75, 2.3, -2.86, M.steel, false, false); // arm
 const showerHead = new THREE.Mesh(
   new THREE.CylinderGeometry(0.09, 0.09, 0.03, 16), M.steel
 );
-showerHead.position.set(-3.35, 2.28, -2.74);
+showerHead.position.set(-2.75, 2.28, -2.74);
 scene.add(showerHead);
 addMesh(1.5, 2.3, 0.03, -2.75, 1.15, -2.92,
   new THREE.MeshLambertMaterial({ color: 0x8ec0c8 }), false, false); // accent tile
