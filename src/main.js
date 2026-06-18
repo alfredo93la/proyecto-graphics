@@ -12,7 +12,7 @@ camera.position.set(-2, 1.7, 2);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(innerWidth, innerHeight);
 renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.shadowMap.type = THREE.PCFShadowMap;
 document.body.appendChild(renderer.domElement);
 
 // ─── Canvas textures ──────────────────────────────────────────────────────────
@@ -851,11 +851,12 @@ function blocked(x, z) {
 }
 
 // ─── Animation loop ───────────────────────────────────────────────────────────
-const clock = new THREE.Clock();
+const timer = new THREE.Timer();
 
 (function animate() {
   requestAnimationFrame(animate);
-  const dt = Math.min(clock.getDelta(), 0.05);
+  timer.update();
+  const dt = Math.min(timer.getDelta(), 0.05);
 
   const move = new THREE.Vector3();
   if (keys['KeyW'] || keys['ArrowUp'])    move.z -= 1;
