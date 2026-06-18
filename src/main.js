@@ -124,13 +124,6 @@ function ceilingLight(x, z, color = 0xfff4e0, intensity = 1.0, dist = 8) {
   light.shadow.bias = -0.002;
   scene.add(light);
 
-  const bulb = new THREE.Mesh(
-    new THREE.SphereGeometry(0.07, 8, 8),
-    new THREE.MeshBasicMaterial({ color: 0xffffcc })
-  );
-  bulb.position.copy(light.position);
-  scene.add(bulb);
-
   const ring = new THREE.Mesh(
     new THREE.CylinderGeometry(0.13, 0.13, 0.03, 16),
     M.white
